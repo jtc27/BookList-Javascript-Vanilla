@@ -48,6 +48,14 @@ class UI {
 
     list.appendChild(row) // appends row to the list
   }
+
+  static clearFields(){
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#isbn').value = '';
+  }
+
+
 }
 
 // Store class: Handles storage
@@ -71,6 +79,9 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
 
   //Add Book to UI
   UI.addBookToList(book);
+
+  //clear fields after "add book" button pressed
+  UI.clearFields()
 
 })
 
