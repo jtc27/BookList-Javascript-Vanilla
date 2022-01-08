@@ -11,6 +11,11 @@ class Book {
 class UI {
   // static methods, so we don't have to instantiate
   static displayBooks() {
+  /*  
+  1. gets stored books 
+  2. loops through them
+  3. addBookToList for each Book
+  */
     const StoredBooks = [
       {
         title: 'Book 1',
@@ -40,12 +45,15 @@ class UI {
     <td>${book.isbn}</td>
     <td><a href ="#" class="btn btn-danger btn-sm delete">X</a></td>
     `;
+
+    list.appendChild(row) // appends row to the list
   }
 }
 
 // Store class: Handles storage
 
 // Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks)
 
 // Event: Add a Book
 
