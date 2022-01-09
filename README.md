@@ -6,14 +6,10 @@
 
 ### Project
 
-| Tool                        | Description       |
-| ---------------------------- | ----------------- |
-| [Bootstrap](https://getbootstrap.com/) | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | 
-
-| First Header  | Second Header |
+| Tool  | Description |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|  [Bootstrap](https://getbootstrap.com/)  | Buttons and alerts customized  |
+| Font Awesome](https://fontawesome.com/) | Icons  |
 
 This was created following a [tutorial](https://www.youtube.com/watch?v=JaMCxVWtW58) 
 
