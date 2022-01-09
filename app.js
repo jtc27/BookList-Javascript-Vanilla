@@ -16,20 +16,8 @@ class UI {
   2. loops through them
   3. addBookToList for each Book
   */
-    const StoredBooks = [
-      {
-        title: 'Book 1',
-        author: 'Wonny Won',
-        isbn: '3939002'
-      },
-      {
-        title: 'Book 2',
-        author: 'Twosday',
-        isbn: '42439'
-      },
-    ]
 
-    const books = StoredBooks;
+    const books = Store.getBooks();
 
     books.forEach((book) => UI.addBookToList(book))
   }
@@ -80,6 +68,43 @@ class UI {
 }
 
 // Store class: Handles storage
+class Store {
+  static getBooks(){
+    let books;
+    if(localStorage.getItem('books') === null){
+      books = []
+    } else {
+      books = JSON.parse(localStorage.getItem('books')) //string >> JS objects
+    }
+    return books
+  }
+
+  static addBook(book){
+    const books = Store.getBooks();
+    books.push(book)
+
+    localStorage.setItem('books', JSON.stringify(books)) // JS object >> string
+  }
+
+  static removeBook(isbn)
+  {
+    const books = Store.getBooks();
+
+    books.forEach((book, index) => {
+      if(books.isbn === isbn) 
+      {
+        books.splice(index, 1);
+      }
+    });
+    // loops through all books
+    // if the current book being looped through matches isbn, splice it out
+
+    //reset local storage with that book removed:
+    localStorage.setItem('books', JSON.stringify(books)) // JS object >> string
+  }
+}
+// Local Storage can't hold objects, they have to be strings
+// In retrieval we parse it back to an object
 
 // Event: Display Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
@@ -106,6 +131,9 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
     //Add Book to UI
     UI.addBookToList(book);
 
+    //Add Book to Store class
+    Store.addBook(book);
+
     //Show Book added
     UI.showAlert('Book Added', 'success')
 
@@ -123,9 +151,27 @@ document.querySelector('#book-list').addEventListener('click', (e) =>
    UI.showAlert('Book removed', 'success')
 })
 
-/* Console logs any element that is clicked inside tbody #book-list
+/* ---------------------------------------------- END
+
+Console logs any element that is clicked inside tbody #book-list
 document.querySelector('#book-list').addEventListener('click', (e) => 
 {
   console.log(e.target)
 })
+*/
+
+/* Hardcoded dummy data for UI.displaybooks
+const StoredBooks = [
+  {
+    title: 'Book 1',
+    author: 'Wonny Won',
+    isbn: '3939002'
+  },
+  {
+    title: 'Book 2',
+    author: 'Twosday',
+    isbn: '42439'
+  },
+]
+
 */
