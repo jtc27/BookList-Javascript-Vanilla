@@ -18,7 +18,7 @@
 |  [Bootstrap](https://getbootstrap.com/)  | Buttons and alerts customized  |
 | [Font Awesome](https://fontawesome.com/) | Icons  |
 
-This was created following a [tutorial](https://www.youtube.com/watch?v=JaMCxVWtW58) 
+This project was created following a [tutorial](https://www.youtube.com/watch?v=JaMCxVWtW58) 
 
 
 
