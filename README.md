@@ -6,14 +6,9 @@
 
 ### Project
 
-| Tool                                      | Description                                      |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | ----------------------------------------- | ------------------------------------------ | ------------------------------------------------- |
-|
-|      bootstrap | buttons and alerts customized |
-|      fontawesome | for some icons/fonts |
-
-
-| :gem: | [carrierwave](https://github.com/carrierwaveuploader/carrierwave)    | File upload solution for Rails in tandem with AWS S3. |
+| Tool                        | Description       |
+| ---------------------------- | ----------------- |
+| [Bootstrap](https://getbootstrap.com/)            | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | 
 
 
 This was created following a [tutorial](https://www.youtube.com/watch?v=JaMCxVWtW58) 
