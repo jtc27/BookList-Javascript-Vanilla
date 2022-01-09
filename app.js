@@ -64,6 +64,9 @@ class UI {
     const container = document.querySelector('.container') //parent
     const form = document.querySelector('#book-form')
     container.insertBefore(div, form); //puts it in div class = container, before #book-form
+
+    // vanish in 3 seconds
+    setTimeout(()=> document.querySelector('.alert').remove(), 3000)
   }
 
   static clearFields(){
