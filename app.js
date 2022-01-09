@@ -56,6 +56,7 @@ class UI {
     }
   }
 
+  // method shows successful submit or empty field alert
   static showAlert(message, className){
     const div = document.createElement('div');
     div.className = `alert alert-${className}`;  //Bootstrap alert
@@ -105,6 +106,9 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
     //Add Book to UI
     UI.addBookToList(book);
 
+    //Show Book added
+    UI.showAlert('Book Added', 'success')
+
     //clear fields after "add book" button pressed
     UI.clearFields()
     }
@@ -114,6 +118,9 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
 document.querySelector('#book-list').addEventListener('click', (e) => 
 {
   UI.deleteBook(e.target)
+
+   //Show Book added
+   UI.showAlert('Book removed', 'success')
 })
 
 /* Console logs any element that is clicked inside tbody #book-list
