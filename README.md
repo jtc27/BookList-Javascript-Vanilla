@@ -1,7 +1,7 @@
 ## My Book List - Vanilla JS
 ⚡ Vanilla Javascript site that adds and removes books.  
 
-<a href="url"><img src="https://raw.githubusercontent.com/jtc27/BookList-Javascript-Vanilla/main/mybooklist.png" align="left" height="200"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/jtc27/BookList-Javascript-Vanilla/main/mybooklist.png" height="300"></a>
 
 ## Features
 * Add a book
