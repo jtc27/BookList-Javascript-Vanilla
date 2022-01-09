@@ -91,7 +91,7 @@ class Store {
     const books = Store.getBooks();
 
     books.forEach((book, index) => {
-      if(books.isbn === isbn) 
+      if(book.isbn === isbn) 
       {
         books.splice(index, 1);
       }
@@ -145,7 +145,15 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
 // Event: Remove a Book
 document.querySelector('#book-list').addEventListener('click', (e) => 
 {
+  // Removes book from UI
   UI.deleteBook(e.target)
+
+  // Removes book from Store
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  // parent goes up to <td>, 
+  // previous element goes to previous <td>
+  // textContent gets ${book.isbn}  *innertext also works*
+  // traversing DOM
 
    //Show Book added
    UI.showAlert('Book removed', 'success')
