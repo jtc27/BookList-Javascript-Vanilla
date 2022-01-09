@@ -49,6 +49,13 @@ class UI {
     list.appendChild(row) // appends row to the list
   }
 
+  static deleteBook(elem){
+    if (elem.classList.contains('delete')) {
+      elem.parentElement.parentElement.remove();
+      // parent is <td>, the parent of that is <tr> row.  we want to delete the entire row
+    }
+  }
+
   static clearFields(){
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
@@ -86,3 +93,14 @@ document.querySelector('#book-form').addEventListener('submit', (e) =>
 })
 
 // Event: Remove a Book
+document.querySelector('#book-list').addEventListener('click', (e) => 
+{
+  UI.deleteBook(e.target)
+})
+
+/* Console logs any element that is clicked inside tbody #book-list
+document.querySelector('#book-list').addEventListener('click', (e) => 
+{
+  console.log(e.target)
+})
+*/
