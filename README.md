@@ -8,7 +8,7 @@
 
 | Tool                        | Description       |
 | ---------------------------- | ----------------- |
-| [Bootstrap](https://getbootstrap.com/)            | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | 
+| [Bootstrap](https://getbootstrap.com/) | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | Buttons and alerts customized | [Font Awesome](https://fontawesome.com/)| For some icons | 
 
 
 This was created following a [tutorial](https://www.youtube.com/watch?v=JaMCxVWtW58) 
