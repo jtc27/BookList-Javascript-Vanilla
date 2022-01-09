@@ -1,6 +1,12 @@
-## My Book List
+## My Book List - Vanilla JS
 ⚡ Vanilla Javascript site that adds and removes books.  
 
+
+## Features
+* Add a book
+* Remove a book
+* Field validation before submitting
+* Local storage
 
 ## Stack
 
